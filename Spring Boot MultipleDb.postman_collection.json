@@ -1,0 +1,736 @@
+{
+	"info": {
+		"_postman_id": "e2a2c831-a447-409b-9cf4-d1031d3d7bd4",
+		"name": "Spring Boot MultipleDb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13677338"
+	},
+	"item": [
+		{
+			"name": "DatabaseOne",
+			"item": [
+				{
+					"name": "Insert New Record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/db-one",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"db-one"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Insert New Record",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-one",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-one"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:29:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"ad8ee0da-2d00-460f-990a-6de9efe978c9\",\n    \"name\": \"Prince\",\n    \"email\": \"prince@email.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch All Records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/db-one",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"db-one"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch All Records",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-one",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-one"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:33:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"0709310b-00ac-4b3b-897d-f7787f0cddda\",\n        \"name\": \"Sameeksha\",\n        \"email\": \"sameeksha@email.com\"\n    },\n    {\n        \"id\": \"80147739-375e-4815-b824-b96ff7dfcb62\",\n        \"name\": \"Aman\",\n        \"email\": \"aman@email.com\"\n    },\n    {\n        \"id\": \"e4d5c08a-8352-40db-8dfa-f1b42971cac3\",\n        \"name\": \"Shubham\",\n        \"email\": \"shubham@email.com\"\n    },\n    {\n        \"id\": \"d93cbf9e-ea12-437b-bc3c-0884a136ef9b\",\n        \"name\": \"Jyoti\",\n        \"email\": \"jyoti@email.com\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single Record",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/db-one/82328443-a4fc-432c-808c-f4790d53c42c",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"db-one",
+								"82328443-a4fc-432c-808c-f4790d53c42c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Single Record (Not Found)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-one/0709310b-00ac-4b3b-897d-f7787f0cddda",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-one",
+										"0709310b-00ac-4b3b-897d-f7787f0cddda"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:37:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "No record found with id: 0709310b-00ac-4b3b-897d-f7787f0cddda"
+						},
+						{
+							"name": "Get Single Record",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-one/82328443-a4fc-432c-808c-f4790d53c42c",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-one",
+										"82328443-a4fc-432c-808c-f4790d53c42c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:38:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"82328443-a4fc-432c-808c-f4790d53c42c\",\n    \"name\": \"Sameeksha\",\n    \"email\": \"sameeksha@email.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Record",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/db-one/82328443-a4fc-432c-808c-f4790d53c42c",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"db-one",
+								"82328443-a4fc-432c-808c-f4790d53c42c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Record (Failed)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-one/82328443-a4fc-432c-808c-f4790d53c42d",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-one",
+										"82328443-a4fc-432c-808c-f4790d53c42d"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:38:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "No record found with id: 82328443-a4fc-432c-808c-f4790d53c42d"
+						},
+						{
+							"name": "Delete Record",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-one/82328443-a4fc-432c-808c-f4790d53c42c",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-one",
+										"82328443-a4fc-432c-808c-f4790d53c42c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:39:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "databaseRecord deleted successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DatabaseTwo",
+			"item": [
+				{
+					"name": "Add New Record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/db-two",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"db-two"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add New Record",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-two",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-two"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:40:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"7d02e61b-ac58-437f-8157-fd2571f6108e\",\n    \"entityName\": \"Shubham\",\n    \"entityEmail\": \"shubham@email.com\",\n    \"entityContactNumber\": \"shubham1234\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/db-two",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"db-two"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Records",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-two",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-two"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:41:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"7d02e61b-ac58-437f-8157-fd2571f6108e\",\n        \"entityName\": \"Shubham\",\n        \"entityEmail\": \"shubham@email.com\",\n        \"entityContactNumber\": \"shubham1234\"\n    },\n    {\n        \"id\": \"e1e2375f-52b5-4cfb-a3c7-a82277629c1e\",\n        \"entityName\": \"Prince\",\n        \"entityEmail\": \"prince@email.com\",\n        \"entityContactNumber\": \"prince1234\"\n    },\n    {\n        \"id\": \"1d93bccb-5a6d-42d9-a8f7-75f8537e800a\",\n        \"entityName\": \"Sameeksha\",\n        \"entityEmail\": \"sameeksha@email.com\",\n        \"entityContactNumber\": \"sameeksha1234\"\n    },\n    {\n        \"id\": \"69e4745a-8dd3-4ae3-bb69-8bcdd877d74a\",\n        \"entityName\": \"Sameeksha\",\n        \"entityEmail\": \"sameeksha@email.com\",\n        \"entityContactNumber\": \"sameeksha1234\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single Record",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/db-two/7d02e61b-ac58-437f-8157-fd2571f6108e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"db-two",
+								"7d02e61b-ac58-437f-8157-fd2571f6108e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Single Record (Failure)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-two/82328443-a4fc-432c-808c-f4790d53c42c",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-two",
+										"82328443-a4fc-432c-808c-f4790d53c42c"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:41:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "No record found with id: 82328443-a4fc-432c-808c-f4790d53c42c"
+						},
+						{
+							"name": "Get Single Record",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-two/7d02e61b-ac58-437f-8157-fd2571f6108e",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-two",
+										"7d02e61b-ac58-437f-8157-fd2571f6108e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:42:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"7d02e61b-ac58-437f-8157-fd2571f6108e\",\n    \"entityName\": \"Shubham\",\n    \"entityEmail\": \"shubham@email.com\",\n    \"entityContactNumber\": \"shubham1234\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Record",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/db-two/7d02e61b-ac58-437f-8157-fd2571f6108e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"db-two",
+								"7d02e61b-ac58-437f-8157-fd2571f6108e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Record",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-two/7d02e61b-ac58-437f-8157-fd2571f6108f",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-two",
+										"7d02e61b-ac58-437f-8157-fd2571f6108f"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:42:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "No record found with id: 7d02e61b-ac58-437f-8157-fd2571f6108f"
+						},
+						{
+							"name": "Delete Record",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/db-two/7d02e61b-ac58-437f-8157-fd2571f6108e",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"db-two",
+										"7d02e61b-ac58-437f-8157-fd2571f6108e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jun 2022 20:43:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "databaseRecord deleted successfully"
+						}
+					]
+				}
+			]
+		}
+	]
+}
